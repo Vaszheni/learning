@@ -26,10 +26,10 @@ class Hero():
     def get_power(self):
         return self.__power
     
-    def set__power(self, power:int):
-        if health < 1:
+    def set_power(self, power:int):
+        if power < 1:
             self.__power = 1
-        elif health > 101:
+        elif power > 101:
             self.__power = 100
         else:
             self.__power = int(power)
@@ -67,3 +67,4 @@ a1.hit(b2)
 print(b2.health)
 b2.restore_hp()
 print(b2.health)
+
