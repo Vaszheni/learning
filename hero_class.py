@@ -5,7 +5,7 @@ class Hero():
     def __init__(self, rank:int, health:int, power:int):
         self.set_hp(health)
         self.set_rank(rank) 
-        self.__power = power
+        self.set_power(power)
     
     #реалізація методів пов'язаних зі здоров'єм
     def get_hp(self):
@@ -20,6 +20,21 @@ class Hero():
             self.__health = int(health)
             
     health = property(get_hp, set_hp)
+    #реалізація методів пов'язаних зі здоров'єм
+    
+    #реалізація методів пов'язаних силою
+    def get_power(self):
+        return self.__power
+    
+    def set__power(self, power:int):
+        if health < 1:
+            self.__power = 1
+        elif health > 101:
+            self.__power = 100
+        else:
+            self.__power = int(power)
+            
+    power = property(get_power, set_power)
     #реалізація методів пов'язаних зі здоров'єм
     
     #реалізація методів пов'язаних із рангом    
