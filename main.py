@@ -83,7 +83,7 @@ def counter_conbinations() -> int:
         for k in [4,5,7]:
             for j in range(0,6):
                 for r in range(8,10):
-                    counter++
+                    counter +=1
             
     return counter
 
