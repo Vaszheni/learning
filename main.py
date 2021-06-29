@@ -80,16 +80,11 @@ def is_phone_number(value) -> bool:
 def counter_conbinations() -> int:
     counter = 0
     for i in range(1, 10):
-        counter += 1
-        for j in range(1, 10):
-            if j == 4 or j == 5 or j == 7:
-                counter += 1
-            else:
-                continue
-            for k in range(0, 6):
-                counter += 1
-                for f in range(6, 10):
-                    counter += 1
+        for k in [4,5,7]:
+            for j in range(0,6):
+                for r in range(8,10):
+                    counter++
+            
     return counter
 
 
