@@ -1,3 +1,3 @@
 class Equip():
-    def __init__(self, queip):
-        self.equip = set(queip)
+    def __init__(self, equip):
+        self.equip = set(equip)

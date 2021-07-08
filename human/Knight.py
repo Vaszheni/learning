@@ -5,10 +5,14 @@ from equip.Equip import Equip
 from human.Human import Human
 
 class Knight (Human, Equip):
-    def __init__(self, rank: int, health: int, power: int, equip: list):
+    def __init__(self, name:str, rank: int, health: int, power: int, equip: list):
+        self.name = name
         self.set_rank(rank)
-        super(Human, self).__init__(health, power)
-        super(Equip, self).__init__(equip)
+        #self.rank = rank
+        super().__init__(health, power)
+        super(Human, self).__init__(equip)
+        if "sword" in equip:
+            self.power += 5
 
     # реалізація методів пов'язаних із рангом
     def set_rank(self, rank: int):
@@ -23,5 +27,7 @@ class Knight (Human, Equip):
         return self.__rank
 
     rank = property(get_rank, set_rank)
+
+
 
     # реалізація методів пов'язаних із рангом
