@@ -15,6 +15,10 @@ class Knight (Human, Equip):
         super(Human, self).__init__(equip)
         if "sword" in equip:
             self.power += 5
+        if "shield" in equip:
+            self.armor = 5
+        else:
+            self.armor = 1
 
     # реалізація методів пов'язаних із рангом
     def set_rank(self, rank: int):
