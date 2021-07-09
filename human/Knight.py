@@ -3,9 +3,11 @@
 #і наносити йому урон відповідний силі. Реалізувати метод відновлення здоров'я.
 from equip.Equip import Equip
 from human.Human import Human
+from random import randint
 
 class Knight (Human, Equip):
     def __init__(self, name:str, rank: int, health: int, power: int, equip: list):
+        self.luckyNumber = randint(0, 4) #добавили число для промаха
         self.name = name
         self.set_rank(rank)
         #self.rank = rank
