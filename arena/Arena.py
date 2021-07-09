@@ -35,12 +35,17 @@ class Arena():
             if randint(0, 9) < 5: #определяем кто бьёт
                 #attaking = knights[0]
                 #defending = knights[1]
-                knights[1]._health = knights[1]._health + knights[1].armor - knights[0].power
+                if randint(0,4) !=  knights[1].luckyNumber:
+                    knights[1]._health = knights[1]._health + knights[1].armor - knights[0].power
+                else:
+                    print(f"{knights[1].name} miss")
             else:
                 #attaking = knights[1]
                 #defending = knights[0]
-                knights[0]._health = knights[0]._health + knights[0].armor - knights[1].power
-
+                if randint(0, 4) != knights[0].luckyNumber:
+                    knights[0]._health = knights[0]._health + knights[0].armor - knights[1].power
+                else:
+                    print(f"{knights[0].name} miss")
             #defending.health = defending.health + defending.armor - attaking.power
         else:
             #вывод и ап победителя
